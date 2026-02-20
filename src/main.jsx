@@ -2,8 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Weather from "./components/Weather";
 import UserStatus from "./components/UserStatus";
+import Greeting from "./components/Greeting"
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <UserStatus loggedIn={true} isAdmin={true} />
+ 
+    <Greeting timeOfDay={"morning"} />
   </StrictMode>,
 );

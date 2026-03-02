@@ -7,9 +7,5 @@ import Click from "./components/Events";
 import UseTheSate from "./components/UseState";
 import ComponentOne from "./components/Component";
 import App from "./App";
-
-createRoot(document.getElementById("root")).render(
-
-    <App />
-
-);
+import Todo from "./TodoList/Todo";
+createRoot(document.getElementById("root")).render(<Todo />);

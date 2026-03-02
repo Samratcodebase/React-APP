@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ComponentOne from "./components/Component";
 import ComponentTwo from "./components/ComponentTwo";
+import Counter from "./components/Counter";
 
 const App = () => {
   const [Count, setCount] = useState(0);
@@ -15,8 +16,7 @@ const App = () => {
       <div>Count Value:{Count}</div>
 
       <main>
-        <ComponentTwo count={Count} handeler={SetValue} />
-        <ComponentOne count={Count} handeler={SetValue} />
+        <Counter Count={Count} SetValue={SetValue} />
       </main>
     </>
   );

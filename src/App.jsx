@@ -1,24 +1,27 @@
 import { useState } from "react";
-import ComponentOne from "./components/Component";
-import ComponentTwo from "./components/ComponentTwo";
-import Counter from "./components/Counter";
 
 const App = () => {
-  const [Count, setCount] = useState(0);
+  const [bgColor, setBgColor] = useState("white");
 
-  const SetValue = () => {
-    setCount(Count + 1);
-  };
-  console.log(Count);
+  const colors = ["red", "green", "blue"];
 
   return (
-    <>
-      <div>Count Value:{Count}</div>
-
-      <main>
-        <Counter Count={Count} SetValue={SetValue} />
-      </main>
-    </>
+    <div
+      style={{
+        backgroundColor: bgColor,
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "10px",
+      }}
+    >
+      {colors.map((color) => (
+        <button key={color} onClick={() => setBgColor(color)}>
+          {color}
+        </button>
+      ))}
+    </div>
   );
 };
 
